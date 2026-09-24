@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.replace("no-js", "js")</script>
 </head>
 <body>
 
@@ -41,21 +42,13 @@
           <a href="student-life.html#tour">Hall Tour</a>
           <a href="student-life.html#groups">Student Groups</a>
           <a href="about.html#faculty">Live-in Faculty</a>
-          <a href="rooms.html">Rooms &amp; Amenities</a>
-        </div>
-      </div>
-      <div class="nav-group">
-        <a href="apply.html" data-nav="apply">Apply</a>
-        <div class="nav-menu">
-          <a href="apply.html">How to Apply</a>
-          <a href="rooms.html#pricing">Rooms &amp; Pricing</a>
-          <a href="faqs.html">FAQs</a>
+          <a href="rooms.html">Rooms &amp; Pricing</a>
         </div>
       </div>
       <div class="nav-group">
         <a href="giving.html" data-nav="giving">Giving</a>
         <div class="nav-menu">
-          <a href="giving.html">Support the Hall</a>
+          <a href="giving.html">Donate</a>
           <a href="giving.html#naming">Naming Opportunities</a>
         </div>
       </div>
@@ -70,7 +63,7 @@
       <div class="nav-group">
         <a href="contact.html" data-nav="contact">Contact</a>
       </div>
-      <a class="nav-cta" href="giving.html">Donate</a>
+      <a class="nav-cta" href="apply.html">Apply</a>
     </nav>
   </div>
 </header>
@@ -81,9 +74,7 @@
     <div class="hero-shade"></div>
     <div class="wrap hero-content hero-split">
       <div class="hero-text">
-        <p class="hero-badges">
-          <span>Est. 1928</span><span>UC Berkeley</span><span>America's first residential college</span>
-        </p>
+        <p class="kicker">Est. 1928 <i></i> UC Berkeley <i></i> America's first residential college</p>
         <h1>Education<br>Through Fellowship.</h1>
         <p class="hero-lede">A castle on the hill above campus, and a community of students from every year and major, with Berkeley faculty living down the hall.</p>
         <div class="hero-actions">
@@ -91,61 +82,66 @@
           <a class="btn btn-ghost" href="#tour">Take a virtual tour</a>
         </div>
       </div>
-      <div class="hero-photos" aria-hidden="false">
-        <img class="hp hp-1" src="assets/big-game.jpg" alt="Bowles residents in Cal gear cheering together at a night football game">
-        <img class="hp hp-2" src="assets/groups/social.jpg" alt="Residents dressed up for a formal outside the Hall">
-        <img class="hp hp-3" src="assets/dinner.jpg" alt="Residents together at a long dinner table">
-      </div>
+      <figure class="hero-photos">
+        <img class="hp-tall" src="assets/groups/social-b.jpg" alt="Residents dressed up for a formal, posing together">
+        <img src="assets/big-game.jpg" alt="Bowles residents in Cal gear cheering at a night football game">
+        <img src="assets/dinner.jpg" alt="Residents together at a long dinner table">
+        <figcaption>Life at Bowles</figcaption>
+      </figure>
     </div>
   </section>
 
+  <section class="stats-band">
+    <dl class="wrap stats">
+      <div><dt>1<sup>st</sup></dt><dd>Residential college in America</dd></div>
+      <div><dt>188</dt><dd>Beds in 42 singles and 73 doubles</dd></div>
+      <div><dt>4</dt><dd>Years you can call it home</dd></div>
+      <div><dt>1989</dt><dd>Listed on the National Register of Historic Places</dd></div>
+    </dl>
+  </section>
+
   <section class="why">
-    <div class="wrap">
+    <div class="wrap why-grid">
       <div class="why-head">
         <p class="eyebrow">Why Bowles</p>
         <h2>A small college inside a big university.</h2>
         <p class="muted">Berkeley is enormous. Bowles is a home for 188 students who eat together, run their own traditions, and have faculty mentors under the same roof.</p>
+        <a class="link-arrow" href="about.html">How the college works</a>
       </div>
-      <div class="reasons">
-        <article>
+      <ol class="reasons">
+        <li>
           <h3>America's first residential college</h3>
-          <p>Built on the Oxford and Cambridge model and opened in 1929, Bowles is the only residential college at Berkeley, and a landmark on the National Register of Historic Places.</p>
-        </article>
-        <article>
+          <p>Built on the Oxford and Cambridge model and opened in 1929, Bowles is the only residential college at Berkeley.</p>
+        </li>
+        <li>
           <h3>Faculty down the hall</h3>
-          <p>The College Principal and Dean are Berkeley faculty who live and dine in the Hall, offering academic and career advising from your first semester to graduation.</p>
-        </article>
-        <article>
+          <p>The College Principal and Dean are Berkeley faculty who live and dine in the Hall, advising you from first semester to graduation.</p>
+        </li>
+        <li>
           <h3>A home for all four years</h3>
-          <p>Stay from first year through senior year. Returning residents get priority in room selection, and study-abroad students keep their place.</p>
-        </article>
-        <article>
+          <p>Stay from first year through senior year. Returning residents get priority in room selection.</p>
+        </li>
+        <li>
           <h3>Meals included, dining together</h3>
-          <p>Every room has an attached bathroom and a full meal plan with a 9 pm snack. Bowles counts as on-campus housing for financial aid.</p>
-        </article>
-        <article>
+          <p>Every room has its own bathroom and a full meal plan, and Bowles counts as on-campus housing for financial aid.</p>
+        </li>
+        <li>
           <h3>Run by students</h3>
-          <p>Residents elect their own government, read applications on the Selection Committee, and send their Student President to the Foundation's Board.</p>
-        </article>
-        <article>
+          <p>Residents elect their own government, read applications on the Selection Committee, and have a seat on the Foundation's Board.</p>
+        </li>
+        <li>
           <h3>Traditions and teams</h3>
           <p>Yule Ball, Founders Ball, the Haunted House, Big Game Dinner, and more intramural teams than any other organization at Berkeley.</p>
-        </article>
-      </div>
-      <dl class="stats">
-        <div><dt>1<sup>st</sup></dt><dd>Residential college in America</dd></div>
-        <div><dt>188</dt><dd>Beds in 42 singles and 73 doubles</dd></div>
-        <div><dt>1989</dt><dd>National Register of Historic Places</dd></div>
-        <div><dt>2016</dt><dd>Reopened after a $45M restoration</dd></div>
-      </dl>
+        </li>
+      </ol>
     </div>
   </section>
 
   <section class="tour" id="tour">
     <div class="wrap">
-      <div class="tour-head">
+      <div class="section-head">
         <div>
-          <p class="eyebrow">Hall Tour</p>
+          <p class="eyebrow eyebrow-light">Hall Tour</p>
           <h2>Take a walk through the Hall.</h2>
         </div>
         <a class="link-arrow" href="https://www.youtube.com/watch?v=iW4BrFRXHik">Watch on YouTube</a>
@@ -159,7 +155,7 @@
 
   <section class="life-strip">
     <div class="wrap">
-      <div class="tour-head">
+      <div class="section-head">
         <div>
           <p class="eyebrow">Student Life</p>
           <h2>What residents get up to.</h2>
@@ -167,15 +163,15 @@
         <a class="link-arrow" href="student-life.html#groups">All student groups</a>
       </div>
       <div class="strip">
-        <a href="student-life.html#groups"><img src="assets/groups/cooking.jpg" alt="Residents baking together" loading="lazy"><span>Cooking &amp; Baking</span></a>
-        <a href="student-life.html#groups"><img src="assets/groups/sports.jpg" alt="Residents on an intramural team" loading="lazy"><span>Intramurals</span></a>
-        <a href="student-life.html#groups"><img src="assets/groups/gardening.jpg" alt="Residents in the community garden" loading="lazy"><span>Community Garden</span></a>
-        <a href="student-life.html#groups"><img src="assets/groups/sustainability.jpg" alt="Residents around a campfire" loading="lazy"><span>Sustainability</span></a>
+        <a href="student-life.html#groups"><img src="assets/groups/cooking-a.jpg" alt="Residents laughing over a tray of freshly baked treats" loading="lazy"><span>Cooking &amp; Baking</span></a>
+        <a href="student-life.html#groups"><img src="assets/groups/sports-a.jpg" alt="An intramural team posing on the court" loading="lazy"><span>Intramurals</span></a>
+        <a href="student-life.html#groups"><img src="assets/groups/gardening.jpg" alt="Residents planting in the community garden" loading="lazy"><span>Community Garden</span></a>
+        <a href="student-life.html#groups"><img src="assets/groups/sustainability-a.jpg" alt="Friends smiling together on a night out" loading="lazy"><span>Sustainability</span></a>
       </div>
     </div>
   </section>
 
-  <section class="feature feature-alt">
+  <section class="feature">
     <div class="wrap feature-grid feature-grid-rev">
       <figure class="feature-fig">
         <img src="assets/drawing.jpg" alt="Watercolor architect's rendering of Bowles Hall from the 1920s" loading="lazy">
@@ -243,7 +239,7 @@
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/crest.png" alt="Bowles Hall crest" width="56" height="67" loading="lazy">
-      <p><strong>Bowles Hall Residential College</strong><br>1928 Stadium Rim Way<br>Berkeley, CA 94720</p>
+      <p><strong>Bowles Hall Residential College</strong><br><em class="footer-motto">Education Through Fellowship</em><br>1928 Stadium Rim Way<br>Berkeley, CA 94720</p>
     </div>
     <div>
       <h3>Visit</h3>
@@ -276,6 +272,16 @@
 </footer>
 
 <script>
+  // Fade sections in as they scroll into view (skipped for reduced-motion users).
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('main > section:not(:first-child) .wrap').forEach((el) => {
+      el.classList.add('reveal'); io.observe(el);
+    });
+  }
+
   const btn = document.querySelector('.menu-btn');
   btn.addEventListener('click', () => {
     const open = document.body.classList.toggle('nav-open');

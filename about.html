@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.replace("no-js", "js")</script>
 </head>
 <body>
 
@@ -41,21 +42,13 @@
           <a href="student-life.html#tour">Hall Tour</a>
           <a href="student-life.html#groups">Student Groups</a>
           <a href="about.html#faculty">Live-in Faculty</a>
-          <a href="rooms.html">Rooms &amp; Amenities</a>
-        </div>
-      </div>
-      <div class="nav-group">
-        <a href="apply.html" data-nav="apply">Apply</a>
-        <div class="nav-menu">
-          <a href="apply.html">How to Apply</a>
-          <a href="rooms.html#pricing">Rooms &amp; Pricing</a>
-          <a href="faqs.html">FAQs</a>
+          <a href="rooms.html">Rooms &amp; Pricing</a>
         </div>
       </div>
       <div class="nav-group">
         <a href="giving.html" data-nav="giving">Giving</a>
         <div class="nav-menu">
-          <a href="giving.html">Support the Hall</a>
+          <a href="giving.html">Donate</a>
           <a href="giving.html#naming">Naming Opportunities</a>
         </div>
       </div>
@@ -70,7 +63,7 @@
       <div class="nav-group">
         <a href="contact.html" data-nav="contact">Contact</a>
       </div>
-      <a class="nav-cta" href="giving.html">Donate</a>
+      <a class="nav-cta" href="apply.html">Apply</a>
     </nav>
   </div>
 </header>
@@ -133,6 +126,46 @@
     </div>
   </section>
 
+  <section class="section section-tight section-alt faculty-section">
+    <div class="wrap">
+      <h2 class="section-title">Meet the faculty in residence</h2>
+      <div class="faculty-grid">
+        <article class="faculty-card">
+          <div class="headshot" role="img" aria-label="Headshot placeholder">
+            <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="30" r="14"/><path d="M12 76c3-17 15-26 28-26s25 9 28 26"/></svg>
+          </div>
+          <h3>Faculty 1</h3>
+          <p class="person-role">Title goes here</p>
+          <p>Bio goes here. A few sentences about their department, research and what they bring to life in the Hall.</p>
+        </article>
+        <article class="faculty-card">
+          <div class="headshot" role="img" aria-label="Headshot placeholder">
+            <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="30" r="14"/><path d="M12 76c3-17 15-26 28-26s25 9 28 26"/></svg>
+          </div>
+          <h3>Faculty 2</h3>
+          <p class="person-role">Title goes here</p>
+          <p>Bio goes here. A few sentences about their department, research and what they bring to life in the Hall.</p>
+        </article>
+        <article class="faculty-card">
+          <div class="headshot" role="img" aria-label="Headshot placeholder">
+            <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="30" r="14"/><path d="M12 76c3-17 15-26 28-26s25 9 28 26"/></svg>
+          </div>
+          <h3>Faculty 3</h3>
+          <p class="person-role">Title goes here</p>
+          <p>Bio goes here. A few sentences about their department, research and what they bring to life in the Hall.</p>
+        </article>
+        <article class="faculty-card">
+          <div class="headshot" role="img" aria-label="Headshot placeholder">
+            <svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="30" r="14"/><path d="M12 76c3-17 15-26 28-26s25 9 28 26"/></svg>
+          </div>
+          <h3>Faculty 4</h3>
+          <p class="person-role">Title goes here</p>
+          <p>Bio goes here. A few sentences about their department, research and what they bring to life in the Hall.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <section class="section">
     <div class="wrap split">
       <figure class="feature-fig">
@@ -153,7 +186,7 @@
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/crest.png" alt="Bowles Hall crest" width="56" height="67" loading="lazy">
-      <p><strong>Bowles Hall Residential College</strong><br>1928 Stadium Rim Way<br>Berkeley, CA 94720</p>
+      <p><strong>Bowles Hall Residential College</strong><br><em class="footer-motto">Education Through Fellowship</em><br>1928 Stadium Rim Way<br>Berkeley, CA 94720</p>
     </div>
     <div>
       <h3>Visit</h3>
@@ -186,6 +219,16 @@
 </footer>
 
 <script>
+  // Fade sections in as they scroll into view (skipped for reduced-motion users).
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('main > section:not(:first-child) .wrap').forEach((el) => {
+      el.classList.add('reveal'); io.observe(el);
+    });
+  }
+
   const btn = document.querySelector('.menu-btn');
   btn.addEventListener('click', () => {
     const open = document.body.classList.toggle('nav-open');

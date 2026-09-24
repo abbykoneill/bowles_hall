@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.replace("no-js", "js")</script>
 </head>
 <body>
 
@@ -41,21 +42,13 @@
           <a href="student-life.html#tour">Hall Tour</a>
           <a href="student-life.html#groups">Student Groups</a>
           <a href="about.html#faculty">Live-in Faculty</a>
-          <a href="rooms.html">Rooms &amp; Amenities</a>
-        </div>
-      </div>
-      <div class="nav-group">
-        <a href="apply.html" data-nav="apply">Apply</a>
-        <div class="nav-menu">
-          <a href="apply.html">How to Apply</a>
-          <a href="rooms.html#pricing">Rooms &amp; Pricing</a>
-          <a href="faqs.html">FAQs</a>
+          <a href="rooms.html">Rooms &amp; Pricing</a>
         </div>
       </div>
       <div class="nav-group">
         <a href="giving.html" data-nav="giving">Giving</a>
         <div class="nav-menu">
-          <a href="giving.html">Support the Hall</a>
+          <a href="giving.html">Donate</a>
           <a href="giving.html#naming">Naming Opportunities</a>
         </div>
       </div>
@@ -70,7 +63,7 @@
       <div class="nav-group">
         <a href="contact.html" data-nav="contact">Contact</a>
       </div>
-      <a class="nav-cta" href="giving.html">Donate</a>
+      <a class="nav-cta" href="apply.html">Apply</a>
     </nav>
   </div>
 </header>
@@ -119,17 +112,17 @@
       <p class="muted section-intro">Residents create and join an array of committees, clubs and groups within the Hall. A few of them:</p>
       <div class="groups">
         <article class="group">
-          <img src="assets/groups/social.jpg" alt="Residents dressed up for a formal, posing together outside the Hall at night" loading="lazy">
+          <img src="assets/groups/social-a.jpg" alt="Residents dressed up for a formal, posing together outside the Hall at night" loading="lazy">
           <h3>Social</h3>
           <p>Organizes the Hall's parties and events, including the traditional Fall Formal, Haunted House, Yule Ball, Spring Soirée, Founders Ball and Beach Party.</p>
         </article>
         <article class="group">
-          <img src="assets/groups/cooking.jpg" alt="Residents laughing in the kitchen with a tray of freshly baked treats" loading="lazy">
+          <img src="assets/groups/cooking-a.jpg" alt="Residents laughing over a tray of freshly baked treats" loading="lazy">
           <h3>Cooking &amp; Baking</h3>
           <p>Smell something good coming from the dining hall? This group uses the student kitchen to cook together, learn new recipes and share them with the Hall.</p>
         </article>
         <article class="group">
-          <img src="assets/groups/sports.jpg" alt="Residents in athletic wear posing on a court and a field" loading="lazy">
+          <img src="assets/groups/sports-b.jpg" alt="Residents in intramural gear posing together on a field" loading="lazy">
           <h3>Sports</h3>
           <p>Makes sport accessible to everyone in the Hall. Bowles fields more intramural teams than any other organization at Berkeley.</p>
         </article>
@@ -139,17 +132,17 @@
           <p>Revived the Bowles Hall Community Garden, growing carrots, lettuce, flowers, sweet peas and tomatoes. The best way to unwind after midterms.</p>
         </article>
         <article class="group">
-          <img src="assets/groups/philanthropy.jpg" alt="Residents preparing food and collecting donations for a fundraiser" loading="lazy">
+          <img src="assets/groups/philanthropy-b.jpg" alt="Residents holding boxes of donations they collected" loading="lazy">
           <h3>Philanthropy</h3>
           <p>Plans Big Game Dinner, fundraisers, community service and scholarships, and raises money for Bay Area non-profits.</p>
         </article>
         <article class="group">
-          <img src="assets/groups/diversity.jpg" alt="A shared meal and a gathering of residents in the lounge" loading="lazy">
+          <img src="assets/groups/diversity-b.jpg" alt="Residents gathered in the wood-panelled lounge for an event" loading="lazy">
           <h3>Diversity Enrichment</h3>
           <p>Leads Hall-wide initiatives, from speaker series to cultural appreciation events, that keep the community learning from itself.</p>
         </article>
         <article class="group">
-          <img src="assets/groups/sustainability.jpg" alt="Residents around a campfire at night" loading="lazy">
+          <img src="assets/groups/sustainability-b.jpg" alt="Residents around a campfire at night" loading="lazy">
           <h3>Sustainability</h3>
           <p>Focuses on climate awareness and education through film mornings, emissions projects, camping trips and learning to get around without a car.</p>
         </article>
@@ -177,7 +170,7 @@
   <div class="wrap footer-grid">
     <div class="footer-brand">
       <img src="assets/crest.png" alt="Bowles Hall crest" width="56" height="67" loading="lazy">
-      <p><strong>Bowles Hall Residential College</strong><br>1928 Stadium Rim Way<br>Berkeley, CA 94720</p>
+      <p><strong>Bowles Hall Residential College</strong><br><em class="footer-motto">Education Through Fellowship</em><br>1928 Stadium Rim Way<br>Berkeley, CA 94720</p>
     </div>
     <div>
       <h3>Visit</h3>
@@ -210,6 +203,16 @@
 </footer>
 
 <script>
+  // Fade sections in as they scroll into view (skipped for reduced-motion users).
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px' });
+    document.querySelectorAll('main > section:not(:first-child) .wrap').forEach((el) => {
+      el.classList.add('reveal'); io.observe(el);
+    });
+  }
+
   const btn = document.querySelector('.menu-btn');
   btn.addEventListener('click', () => {
     const open = document.body.classList.toggle('nav-open');
