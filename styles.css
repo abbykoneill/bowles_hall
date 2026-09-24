@@ -453,9 +453,6 @@ figcaption { font: italic 400 0.95rem/1.4 var(--serif); color: var(--ink-soft); 
 .post-fig { margin: 0 0 32px; }
 .post-fig img { width: 100%; border-radius: 2px; }
 
-/* ---------- Scroll reveal (only when JS is running) ---------- */
-.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
-.js .reveal.in { opacity: 1; transform: none; }
 
 /* ---------- Faculty placeholders ---------- */
 .faculty-section { padding-top: 0; }
